@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-justify-content-center ion-align-items-center" style="height: 100%;">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-md="6" size-lg="4">
+        <ion-card class="center-card">
+          <form [formGroup]="profileForm" (ngSubmit)="saveProfile()">
+
+            <div class="photo-container" *ngIf="photo">
+              <img [src]="photo" alt="Profile Picture" class="profile-picture">
+            </div>
+
+            <ion-item>
+                <ion-label>Profile Picture</ion-label>
+                <ion-button (click)="takePhoto()">
+                  <ion-icon slot="icon-only" ios="add" md="add"></ion-icon>
+                </ion-button>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">Name</ion-label>
+              <ion-input formControlName="name" type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">Description</ion-label>
+              <ion-textarea formControlName="description"></ion-textarea>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">Interests</ion-label>
+              <ion-input formControlName="interests" type="text"></ion-input>
+            </ion-item>
+            <ion-button expand="block" type="submit">Sign up</ion-button>
+          </form>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
