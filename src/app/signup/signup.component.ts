@@ -44,7 +44,7 @@ export class SignupComponent implements OnInit {
         photoUrl: this.photo
       };
       console.log('Profile Data:', profileData);
-      this.router.navigate(['/home']);
+      this.router.navigate(['/']);
     }
   }
 }
