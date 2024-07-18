@@ -1,20 +1,19 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <ion-card class="content-card chat-card">
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let message of messages">
+          {{ message }}
+        </ion-item>
+      </ion-list>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+      <ion-item>
+        <ion-textarea [(ngModel)]="messageInput" placeholder="Type your message"></ion-textarea>
+        <ion-button (click)="sendMessage()">Send</ion-button>
+      </ion-item>
+    </ion-card-content>
+    <app-profile-card [profile]="profile" class="content-card"></app-profile-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  </ion-card>
+
 </ion-content>
