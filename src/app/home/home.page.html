@@ -1,3 +1,9 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
   <ion-card class="content-card chat-card">
     <ion-card-content>
@@ -11,8 +17,10 @@
         <ion-textarea [(ngModel)]="messageInput" placeholder="Type your message"></ion-textarea>
         <ion-button (click)="sendMessage()">Send</ion-button>
       </ion-item>
+
+      <app-profile-card [profile]="profile" class="content-card profile-card"></app-profile-card>
+
     </ion-card-content>
-    <app-profile-card [profile]="profile" class="content-card"></app-profile-card>
 
   </ion-card>
 

@@ -16,7 +16,7 @@ export class HomePage {
       this.messageInput = '';
 
       this.profile = {
-        image: 'https://via.placeholder.com/100', // Placeholder image URL
+        image: 'https://picsum.photos/200', // Placeholder image URL
         description: 'This is a profile description'
       };
     }

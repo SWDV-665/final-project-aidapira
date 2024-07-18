@@ -1,8 +1,18 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
 .content-card {
   margin: auto;
   margin-top: 20px;
   max-width: 600px;
   width: 100%;
+  padding: 20px
 }
 
 ion-item {
@@ -17,4 +27,8 @@ ion-textarea {
 
 ion-button {
   margin-left: 10px;
+}
+
+.profile-card {
+  display: flex;
 }
