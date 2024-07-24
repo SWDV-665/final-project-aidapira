@@ -4,14 +4,20 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Import ReactiveFormsModule
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SignupComponent } from './signup/signup.component';
+import { RegisterPage } from './signup/signup.component';
 import { HomePage } from './home/home.page';
 import { ProfileCardComponent } from './profile-card/profile-card.component';
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { environment } from '../environments/environment';
+import { LoginPage } from './signin/signin.page';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent,
+    RegisterPage,
+    LoginPage,
     HomePage,
     ProfileCardComponent
   ],
@@ -21,6 +27,8 @@ import { ProfileCardComponent } from './profile-card/profile-card.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule, // Include ReactiveFormsModule here
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
