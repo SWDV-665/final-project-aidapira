@@ -1,10 +1,12 @@
+@import '../../theme/variables.scss';
+
 :host {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: map-get($colors , 'background');
 }
 
 .content-card {
