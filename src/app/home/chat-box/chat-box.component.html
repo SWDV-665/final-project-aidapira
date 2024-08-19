@@ -1,0 +1,16 @@
+<div class="ion-text-center">
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let message of messages">
+          {{ message }}
+        </ion-item>
+      </ion-list>
+
+      <ion-item>
+        <ion-textarea [(ngModel)]="messageInput" placeholder="Type your message"></ion-textarea>
+        <ion-button (click)="sendMessage()">Send</ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</div>

@@ -1,0 +1,36 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.center-card {
+    width: 100%;
+    max-width: 280px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+ion-content {
+    --padding-bottom: 0;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.profile-picture {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    /* Make the image circular */
+    object-fit: cover;
+    /* Ensure the image covers the element, preserving aspect ratio */
+}
